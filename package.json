@@ -13,7 +13,8 @@
     "test:watch": "jest --watch",
     "build": "tsc",
     "build:clean": "npm run clean && npm run build",
-    "release": "npm run build:clean && npm publish"
+    "release": "npm run build:clean && npm publish",
+    "test:ci": "jest --verbose"
   },
   "husky": {
     "hooks": {
