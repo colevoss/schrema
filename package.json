@@ -3,11 +3,16 @@
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
+  "files": [
+    "src",
+    "dist"
+  ],
   "scripts": {
     "test": "jest",
+    "clean": "rimraf dist",
     "test:watch": "jest --watch",
     "build": "tsc",
-    "build:clean": "tsc --clean",
+    "build:clean": "npm run clean && npm run build",
     "release": "npm run build:clean && npm publish"
   },
   "husky": {
