@@ -8,6 +8,10 @@
     "src",
     "dist"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/colevoss/schrema"
+  },
   "scripts": {
     "test": "jest",
     "clean": "rimraf dist",
