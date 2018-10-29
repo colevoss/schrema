@@ -16,7 +16,7 @@ export class Schema<T> {
   }
 
   static validate<T>(
-    data: SchemaTypes.DataType<T>,
+    data: SchemaTypes.DataType<Partial<T>>,
     schema: SchemaTypes.SchemaType<T>,
   ): T {
     const errors: TypeError[] = [];
@@ -28,7 +28,9 @@ export class Schema<T> {
       if (val instanceof Error) {
         errors.push(val);
       } else {
-        validatedData[key] = val;
+        if (val !== null && val !== undefined) {
+          validatedData[key] = val;
+        }
       }
     }
 

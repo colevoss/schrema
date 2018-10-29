@@ -42,4 +42,13 @@ describe('Schema', () => {
 
     expect(validate).toThrowError();
   });
+
+  test('A non required key doesnt get put back into data with null if not provided', () => {
+    // @ts-ignore @types must not be caught up
+    const validated = schema.validate({
+      a: 'string',
+    });
+
+    expect(validated).not.toHaveProperty('b');
+  });
 });

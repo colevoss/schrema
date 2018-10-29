@@ -1,6 +1,6 @@
 {
   "name": "schrema",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "license": "MIT",
@@ -8,6 +8,10 @@
     "src",
     "dist"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/colevoss/schrema"
+  },
   "scripts": {
     "test": "jest",
     "clean": "rimraf dist",
